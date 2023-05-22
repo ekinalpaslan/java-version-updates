@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList items = new ArrayList();
+        ArrayList<Integer> items = new ArrayList<Integer>();
 
         items.add(1);
         items.add(2);
@@ -20,9 +20,9 @@ public class Main {
 
     }
 
-    private static void printDoubled(ArrayList items){
-        for (Object i : items){
-            System.out.println((Integer)i*2);
+    private static void printDoubled(ArrayList<Integer> items){
+        for (Integer i : items){
+            System.out.println(i*2);
         }
     }
 
