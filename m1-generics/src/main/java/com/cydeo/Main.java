@@ -18,6 +18,15 @@ public class Main {
 
         printDoubled(items);
 
+        System.out.println("---------------------------------------------");
+
+        FootballPlayer joe = new FootballPlayer("Joe");
+        BaseballPlayer pat = new BaseballPlayer("Pat");
+        SoccerPlayer beckham = new SoccerPlayer("Beckham");
+
+        Team<SoccerPlayer> liverpool = new Team("Liverpool"); //Team accepting any object
+
+
     }
 
     private static void printDoubled(ArrayList<Integer> items){
@@ -25,5 +34,8 @@ public class Main {
             System.out.println(i*2);
         }
     }
+
+    //Team<String> brokenTeam = new Team<>("what kind of team");
+    //Team<Integer> t2 = new Team<>("weirdo");
 
 }
