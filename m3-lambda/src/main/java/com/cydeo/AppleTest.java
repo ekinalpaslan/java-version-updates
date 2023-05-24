@@ -2,6 +2,7 @@ package com.cydeo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class AppleTest {
     public static void main(String[] args) {
@@ -18,6 +19,13 @@ public class AppleTest {
         List<Apple> greenApple = filterApples(inventory, new AppleGreenColorPredicate());
         System.out.println(greenApple);
 
+
+        //lambda
+        ApplePredicate appleWeightPredicate = (Apple apple) -> apple.getWeight()>200;
+        List<Apple> heavyApple2 = filterApples(inventory, appleWeightPredicate);
+
+        ApplePredicate appleGreenColorPredicate = apple -> apple.getColor().equals(Color.GREEN);
+        List<Apple> greenApple2 = filterApples(inventory, appleGreenColorPredicate);
 
 
     }
