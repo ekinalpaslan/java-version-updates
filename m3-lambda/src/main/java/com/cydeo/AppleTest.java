@@ -24,6 +24,7 @@ public class AppleTest {
         ApplePredicate appleWeightPredicate = (Apple apple) -> apple.getWeight()>200;
         List<Apple> heavyApple2 = filterApples(inventory, appleWeightPredicate);
 
+        //                                    type inference
         ApplePredicate appleGreenColorPredicate = apple -> apple.getColor().equals(Color.GREEN);
         List<Apple> greenApple2 = filterApples(inventory, appleGreenColorPredicate);
 
