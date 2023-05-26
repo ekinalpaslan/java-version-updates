@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class Main {
@@ -27,6 +28,10 @@ public class Main {
         Function<Integer,Double> b = new MyClass()::method;
         BiFunction<MyClass,Integer,Double> b1 = MyClass::method;    //you can just write class name without new obj
         b1.apply(new MyClass(),5);
+
+
+        Consumer<Integer> display = i -> System.out.println(i);
+        Consumer<Integer> d1 = System.out::println;
 
 
 
