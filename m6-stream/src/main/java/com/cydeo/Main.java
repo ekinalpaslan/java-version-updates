@@ -23,9 +23,12 @@ public class Main {
                 new Course("MS",102)
         );
 
+
+        //creating stream values
         Stream<Course> myCourseStream = myCourses.stream();
 
-
+        //creating stream values
+        Stream<Integer> stream = Stream.of(1,2,3,4);
 
 
 
