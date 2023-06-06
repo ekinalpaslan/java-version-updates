@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 public class StreamOperations {
     public static void main(String[] args) {
 
-        List<Integer> list = Arrays.asList(1,2,2,3,4,6);
+        List<Integer> list = Arrays.asList(1,2,3,4,6,6);
         list.forEach(System.out::println);      //belongs to Iterable interface
 
         System.out.println("-------------------");
@@ -27,6 +27,25 @@ public class StreamOperations {
         list.stream()
                 .filter(i -> i%2==0)
                 .limit(1)
+                .forEach(System.out::println);
+
+        System.out.println("Skip");
+        list.stream()
+                .filter(i -> i%2==0)
+                .skip(1)
+                .forEach(System.out::println);
+
+        System.out.println("Map");
+        list.stream()
+                .filter(i -> i%2==0)
+                .map(i -> i*2)
+                .forEach(System.out::println);
+
+
+        System.out.println("Task");
+        List<String> words = Arrays.asList("JAVA","APPLE","HONDA","DEVELOPER");
+        words.stream()
+                .map(i -> i.length())
                 .forEach(System.out::println);
 
     }
